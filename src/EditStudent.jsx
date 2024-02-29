@@ -13,7 +13,7 @@ const EditStudent = () => {
   });
   
   const { id } = useParams();
-  const navigate = useNavigate(); // Correctly using useNavigate here
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchStudent = async () => {
@@ -22,7 +22,7 @@ const EditStudent = () => {
         setStudent(result.data);
       } catch (error) {
         console.error("Failed to fetch student data:", error);
-        // Optionally handle the error (e.g., show an error message)
+      
       }
     };
     fetchStudent();
@@ -36,10 +36,10 @@ const EditStudent = () => {
     e.preventDefault();
     try {
       await axios.put(`http://localhost:8080/api/Student/${id}`, student);
-      navigate('/'); // Correctly using navigate here
+      navigate('/'); 
     } catch (error) {
       console.error("Failed to update student:", error);
-      // Optionally handle the error (e.g., show an error message)
+      
     }
   };
 

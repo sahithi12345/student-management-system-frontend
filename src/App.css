@@ -184,7 +184,7 @@ a:hover {
   opacity: 0.9;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .editStd {
     padding: 15px;
