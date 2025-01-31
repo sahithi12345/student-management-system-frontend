@@ -50,14 +50,14 @@ const AddStudent = () => {
           <input type="text" name="phoneNumber" value={student.phoneNumber} onChange={handleChange} required />
         </div>
         <div>
-          <label>Class Name:</label>
+          <label>Age:</label>
           <input type="text" name="className" value={student.className} onChange={handleChange} required />
         </div>
         <div>
           <label>Father's Name:</label>
           <input type="text" name="fathersName" value={student.fathersName} onChange={handleChange} required />
         </div>
-        <button type="submit">Add Student</button>
+        <button type="submit" onClick={handleSubmit}> Add Student</button>
       </form>
     </div>
   );

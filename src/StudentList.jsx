@@ -32,7 +32,7 @@ const StudentList = () => {
 
   return (
     <div className="student-list">
-    <h2>List of all Students</h2>
+    <h2>List of All Students</h2>
     <Link to="/add">Add New Student</Link>
     <div className="student-container">
       {students.map((student) => (
@@ -41,7 +41,7 @@ const StudentList = () => {
           <div>Email: {student.email}</div>
           <div>Address: {student.address}</div>
           <div>Phone Number: {student.phoneNumber}</div>
-          <div>Class: {student.className}</div>
+          <div>Age: {student.className}</div>
           <div>Father's Name: {student.fathersName}</div>
           <button onClick={() => deleteStudent(student.id)}>Delete</button>
           <Link to={`/edit/${student.id}`}>Edit</Link>
