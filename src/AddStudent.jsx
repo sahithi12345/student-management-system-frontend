@@ -12,7 +12,7 @@ const AddStudent = () => {
     fathersName: ''
   });
 
-  const navigate = useNavigate(); // Correct usage for React Router v6
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setStudent({ ...student, [e.target.name]: e.target.value });
@@ -22,10 +22,10 @@ const AddStudent = () => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:8080/api/Student', student);
-      navigate('/'); // Navigates back to the homepage after successful submission
+      navigate('/');
     } catch (error) {
       console.error("Failed to add student:", error);
-      // Optionally handle the error (e.g., show an error message)
+   
     }
   };
 
